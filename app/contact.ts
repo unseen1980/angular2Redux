@@ -1,7 +1,6 @@
-// Contact Component
-
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import { ContactStore, Contact as ContactModel} from './contact-store';
+import { removeContact, starContact } from './actions';
 
 @Component({
   selector: 'contact',
@@ -17,10 +16,10 @@ export default class Contact {
   constructor(private store: ContactStore) { }
 
   removeContact(contact) {
-    this.store.removeContact(contact);
+    this.store.dispatch(removeContact(contact.id));
   }
 
   starContact(contact) {
-    this.store.starContact(contact);
+    this.store.dispatch(starContact(contact.id));
   }
 }

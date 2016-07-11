@@ -4,3 +4,6 @@
 #System Files
 .DS_Store
 Thumbs.db
+
+#vanilajs
+/app/*.js
