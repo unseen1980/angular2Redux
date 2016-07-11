@@ -1,12 +1,10 @@
 <!-- Contact HTML -->
-<div class="contact-container">
-  <span>{{ contact.name }}</span>
-  <button (click)="starContact(contact)">
-    <i class="fa fa-2x" 
-      [class.fa-star]="contact.star" 
-      [class.fa-star-o]="!contact.star"></i>
-  </button>
-  <button (click)="removeContact(contact)">
-    <i class="fa fa-trash fa-2x"></i>
-  </button>
-</div>
+
+<span>{{ contact.name }}</span>
+<a href="#!" class="secondary-content" (click)="removeContact(contact)">
+  <i class="material-icons">delete</i>
+</a>
+<a href="#!" class="secondary-content" (click)="starContact(contact)">
+  <i class="material-icons" *ngIf="contact.star">favorite</i>
+  <i class="material-icons" *ngIf="!contact.star">favorite_border</i>
+</a>

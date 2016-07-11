@@ -5,7 +5,6 @@ import { removeContact, starContact } from './actions';
 @Component({
   selector: 'contact',
   templateUrl: 'app/contact.html',
-  styleUrls: ['app/contact.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 

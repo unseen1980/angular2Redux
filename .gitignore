@@ -1,9 +1,9 @@
 # dependencies
 /node_modules
 
-#System Files
+# System Files
 .DS_Store
 Thumbs.db
 
-#vanilajs
+# misc
 /app/*.js

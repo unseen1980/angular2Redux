@@ -1,8 +1,8 @@
 <!-- Contact List HTML -->
-<input #newContact placeholder="Add Contact" 
-  (keyup.enter)="addContact(newContact.value); newContact.value='' ">
-<ul>
-  <li *ngFor="let contact of store.contacts">
+<input #newContact placeholder="Add passenger's name" 
+    (keyup.enter)="addContact(newContact.value); newContact.value='' ">
+<ul class="collection" *ngIf="store.contacts.size > 0">
+  <li class="collection-item" *ngFor="let contact of store.contacts">
     <contact [contact]="contact"></contact>
   </li>
 </ul>

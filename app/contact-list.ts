@@ -6,13 +6,12 @@ import { addContact } from './actions';
 @Component({
   selector: 'contact-list',
   templateUrl: 'app/contact-list.html',
-  styleUrls: ['app/contact-list.css'],
   directives: [Contact]
 })
 
 export class ContactList {
-	contactID: number;
-
+	contactID: number;  
+  
 	constructor(private store: ContactStore) {
 		this.contactID = 0;
 	}
